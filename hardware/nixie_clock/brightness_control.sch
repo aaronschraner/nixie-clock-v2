@@ -1,0 +1,928 @@
+EESchema Schematic File Version 4
+LIBS:nixie_clock-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 13
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 1950 2500 0    50   Input ~ 0
+PWM_in
+Text HLabel 1900 3750 0    50   Input ~ 0
+Sync
+$Comp
+L power:+5V #PWR01
+U 1 1 5B819E91
+P 2650 2500
+F 0 "#PWR01" H 2650 2350 50  0001 C CNN
+F 1 "+5V" H 2665 2673 50  0000 C CNN
+F 2 "" H 2650 2500 50  0001 C CNN
+F 3 "" H 2650 2500 50  0001 C CNN
+	1    2650 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:R R2
+U 1 1 5B819EC8
+P 2650 2750
+F 0 "R2" H 2720 2796 50  0000 L CNN
+F 1 "100k" H 2720 2705 50  0000 L CNN
+F 2 "" V 2580 2750 50  0001 C CNN
+F 3 "" H 2650 2750 50  0001 C CNN
+	1    2650 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:D D1
+U 1 1 5B819F10
+P 2450 3000
+F 0 "D1" H 2600 2950 50  0000 C CNN
+F 1 "D" H 2450 2875 50  0000 C CNN
+F 2 "" H 2450 3000 50  0001 C CNN
+F 3 "" H 2450 3000 50  0001 C CNN
+	1    2450 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L device:R R1
+U 1 1 5B819F6F
+P 2200 2750
+F 0 "R1" H 2270 2796 50  0000 L CNN
+F 1 "300" H 2270 2705 50  0000 L CNN
+F 2 "" V 2130 2750 50  0001 C CNN
+F 3 "" H 2200 2750 50  0001 C CNN
+	1    2200 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 2500 2050 2500
+Wire Wire Line
+	2200 2500 2200 2600
+Wire Wire Line
+	2200 2900 2200 3000
+Wire Wire Line
+	2200 3000 2300 3000
+Wire Wire Line
+	2600 3000 2650 3000
+Wire Wire Line
+	2650 3000 2650 2900
+Wire Wire Line
+	2650 2500 2650 2600
+$Comp
+L transistors:2N7000 Q1
+U 1 1 5B81A17E
+P 2750 3350
+F 0 "Q1" H 2955 3396 50  0000 L CNN
+F 1 "2N7000" H 2955 3305 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 2950 3275 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 2750 3350 50  0001 L CNN
+	1    2750 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 3350 2550 3150
+Wire Wire Line
+	2550 3150 2650 3150
+$Comp
+L power:GND #PWR02
+U 1 1 5B81A220
+P 2850 3700
+F 0 "#PWR02" H 2850 3450 50  0001 C CNN
+F 1 "GND" H 2855 3527 50  0000 C CNN
+F 2 "" H 2850 3700 50  0001 C CNN
+F 3 "" H 2850 3700 50  0001 C CNN
+	1    2850 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 3700 2850 3550
+Wire Wire Line
+	2650 3000 2650 3150
+Connection ~ 2650 3000
+Connection ~ 2650 3150
+Wire Wire Line
+	2650 3150 2850 3150
+$Comp
+L linear:OP179GS U8
+U 1 1 5B81A437
+P 3700 3150
+F 0 "U8" H 4041 3196 50  0000 L CNN
+F 1 "OP179GS" H 3700 3000 50  0000 L CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 3700 3150 50  0001 C CNN
+F 3 "http://www.analog.com/media/en/technical-documentation/data-sheets/OP179_279.pdf" H 3850 3300 50  0001 C CNN
+	1    3700 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 3150 2850 3050
+Wire Wire Line
+	2850 3050 3400 3050
+Connection ~ 2850 3150
+Wire Wire Line
+	3400 3250 3300 3250
+Wire Wire Line
+	3300 3250 3300 3650
+Wire Wire Line
+	3300 3650 4150 3650
+Wire Wire Line
+	4150 3650 4150 3150
+Wire Wire Line
+	4150 3150 4000 3150
+Wire Wire Line
+	3600 3450 3600 3750
+$Comp
+L power:GND #PWR04
+U 1 1 5B81A74F
+P 3600 3750
+F 0 "#PWR04" H 3600 3500 50  0001 C CNN
+F 1 "GND" H 3605 3577 50  0000 C CNN
+F 2 "" H 3600 3750 50  0001 C CNN
+F 3 "" H 3600 3750 50  0001 C CNN
+	1    3600 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR03
+U 1 1 5B81A795
+P 3600 2600
+F 0 "#PWR03" H 3600 2450 50  0001 C CNN
+F 1 "+5V" H 3615 2773 50  0000 C CNN
+F 2 "" H 3600 2600 50  0001 C CNN
+F 3 "" H 3600 2600 50  0001 C CNN
+	1    3600 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 2600 3600 2850
+$Comp
+L cmos4000:4066 U10
+U 1 1 5B81AA03
+P 5400 1900
+F 0 "U10" H 5500 2050 50  0000 L CNN
+F 1 "4066" H 5450 1750 50  0000 L CNN
+F 2 "" H 5400 1900 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 5400 1900 60  0001 C CNN
+	1    5400 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L cmos4000:4066 U11
+U 1 1 5B81ACA0
+P 7650 1900
+F 0 "U11" H 7991 1946 50  0000 L CNN
+F 1 "4066" H 7991 1855 50  0000 L CNN
+F 2 "" H 7650 1900 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 7650 1900 60  0001 C CNN
+	1    7650 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L cmos4000:4066 U11
+U 2 1 5B81ACA7
+P 7650 2550
+F 0 "U11" H 7991 2596 50  0000 L CNN
+F 1 "4066" H 7991 2505 50  0000 L CNN
+F 2 "" H 7650 2550 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 7650 2550 60  0001 C CNN
+	2    7650 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L cmos4000:4066 U11
+U 3 1 5B81ACAE
+P 7650 3200
+F 0 "U11" H 7991 3246 50  0000 L CNN
+F 1 "4066" H 7991 3155 50  0000 L CNN
+F 2 "" H 7650 3200 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 7650 3200 60  0001 C CNN
+	3    7650 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L cmos4000:4066 U11
+U 4 1 5B81ACB5
+P 7650 3850
+F 0 "U11" H 7991 3896 50  0000 L CNN
+F 1 "4066" H 7991 3805 50  0000 L CNN
+F 2 "" H 7650 3850 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 7650 3850 60  0001 C CNN
+	4    7650 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 1900 5100 1900
+Wire Wire Line
+	4700 3850 5100 3850
+Wire Wire Line
+	4700 3200 5100 3200
+Connection ~ 4700 3200
+Wire Wire Line
+	4700 3200 4700 3850
+Wire Wire Line
+	4700 2550 5100 2550
+Connection ~ 4700 2550
+Wire Wire Line
+	4700 2550 4700 1900
+$Comp
+L ttl_ieee:74164 U9
+U 1 1 5B81BD73
+P 4200 4700
+F 0 "U9" H 4200 5266 50  0000 C CNN
+F 1 "74164" H 4200 5175 50  0000 C CNN
+F 2 "" H 4200 4700 50  0001 C CNN
+F 3 "" H 4200 4700 50  0001 C CNN
+	1    4200 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 4800 3550 4800
+Wire Wire Line
+	3550 4800 3550 4700
+Wire Wire Line
+	3550 4700 3650 4700
+Wire Wire Line
+	3550 4700 2100 4700
+Wire Wire Line
+	2100 4700 2100 3750
+Wire Wire Line
+	2100 3750 1900 3750
+Connection ~ 3550 4700
+Wire Wire Line
+	3650 4550 2150 4550
+Wire Wire Line
+	2150 4550 2150 3500
+Wire Wire Line
+	2150 3500 2050 3500
+Wire Wire Line
+	2050 3500 2050 2500
+Connection ~ 2050 2500
+Wire Wire Line
+	2050 2500 2200 2500
+Wire Wire Line
+	4750 4750 4850 4750
+Wire Wire Line
+	4850 4750 4850 2050
+Wire Wire Line
+	4850 2050 5100 2050
+Wire Wire Line
+	4750 4900 4900 4900
+Wire Wire Line
+	4900 4900 4900 2700
+Wire Wire Line
+	4900 2700 5100 2700
+Wire Wire Line
+	4750 5000 4950 5000
+Wire Wire Line
+	4950 5000 4950 3350
+Wire Wire Line
+	4950 3350 5100 3350
+Wire Wire Line
+	4750 5100 5000 5100
+Wire Wire Line
+	5000 5100 5000 4000
+Wire Wire Line
+	5000 4000 5100 4000
+$Comp
+L device:C C1
+U 1 1 5B81EFB2
+P 5800 2100
+F 0 "C1" H 5915 2146 50  0000 L CNN
+F 1 "100nF" H 5915 2055 50  0000 L CNN
+F 2 "" H 5838 1950 50  0001 C CNN
+F 3 "" H 5800 2100 50  0001 C CNN
+	1    5800 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L transistors:2N7000 Q2
+U 1 1 5B81F10A
+P 6100 1900
+F 0 "Q2" H 6305 1946 50  0000 L CNN
+F 1 "2N7000" H 6305 1855 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 6300 1825 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 6100 1900 50  0001 L CNN
+	1    6100 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 2300 6000 2300
+$Comp
+L power:GND #PWR08
+U 1 1 5B822F2E
+P 6000 2300
+F 0 "#PWR08" H 6000 2050 50  0001 C CNN
+F 1 "GND" H 6005 2127 50  0000 C CNN
+F 2 "" H 6000 2300 50  0001 C CNN
+F 3 "" H 6000 2300 50  0001 C CNN
+	1    6000 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 1900 5800 1900
+Wire Wire Line
+	5800 2300 5800 2250
+Wire Wire Line
+	5800 1950 5800 1900
+Connection ~ 5800 1900
+Wire Wire Line
+	5800 1900 5900 1900
+Wire Wire Line
+	6000 2300 6050 2300
+Wire Wire Line
+	6050 2300 6050 2150
+Wire Wire Line
+	6050 2150 6200 2150
+Wire Wire Line
+	6200 2150 6200 2100
+Connection ~ 6000 2300
+$Comp
+L cmos4000:4066 U10
+U 2 1 5B82B642
+P 5400 2550
+F 0 "U10" H 5500 2700 50  0000 L CNN
+F 1 "4066" H 5450 2400 50  0000 L CNN
+F 2 "" H 5400 2550 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 5400 2550 60  0001 C CNN
+	2    5400 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C2
+U 1 1 5B82B649
+P 5800 2750
+F 0 "C2" H 5915 2796 50  0000 L CNN
+F 1 "100nF" H 5915 2705 50  0000 L CNN
+F 2 "" H 5838 2600 50  0001 C CNN
+F 3 "" H 5800 2750 50  0001 C CNN
+	1    5800 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L transistors:2N7000 Q3
+U 1 1 5B82B650
+P 6100 2550
+F 0 "Q3" H 6305 2596 50  0000 L CNN
+F 1 "2N7000" H 6305 2505 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 6300 2475 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 6100 2550 50  0001 L CNN
+	1    6100 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 2950 6000 2950
+$Comp
+L power:GND #PWR09
+U 1 1 5B82B658
+P 6000 2950
+F 0 "#PWR09" H 6000 2700 50  0001 C CNN
+F 1 "GND" H 6005 2777 50  0000 C CNN
+F 2 "" H 6000 2950 50  0001 C CNN
+F 3 "" H 6000 2950 50  0001 C CNN
+	1    6000 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 2550 5800 2550
+Wire Wire Line
+	5800 2950 5800 2900
+Wire Wire Line
+	5800 2600 5800 2550
+Connection ~ 5800 2550
+Wire Wire Line
+	5800 2550 5900 2550
+Wire Wire Line
+	6000 2950 6050 2950
+Wire Wire Line
+	6050 2950 6050 2800
+Wire Wire Line
+	6050 2800 6200 2800
+Wire Wire Line
+	6200 2800 6200 2750
+Connection ~ 6000 2950
+$Comp
+L cmos4000:4066 U10
+U 3 1 5B82C864
+P 5400 3200
+F 0 "U10" H 5500 3350 50  0000 L CNN
+F 1 "4066" H 5450 3050 50  0000 L CNN
+F 2 "" H 5400 3200 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 5400 3200 60  0001 C CNN
+	3    5400 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C3
+U 1 1 5B82C86B
+P 5800 3400
+F 0 "C3" H 5915 3446 50  0000 L CNN
+F 1 "100nF" H 5915 3355 50  0000 L CNN
+F 2 "" H 5838 3250 50  0001 C CNN
+F 3 "" H 5800 3400 50  0001 C CNN
+	1    5800 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L transistors:2N7000 Q4
+U 1 1 5B82C872
+P 6100 3200
+F 0 "Q4" H 6305 3246 50  0000 L CNN
+F 1 "2N7000" H 6305 3155 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 6300 3125 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 6100 3200 50  0001 L CNN
+	1    6100 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3600 6000 3600
+$Comp
+L power:GND #PWR010
+U 1 1 5B82C87A
+P 6000 3600
+F 0 "#PWR010" H 6000 3350 50  0001 C CNN
+F 1 "GND" H 6005 3427 50  0000 C CNN
+F 2 "" H 6000 3600 50  0001 C CNN
+F 3 "" H 6000 3600 50  0001 C CNN
+	1    6000 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 3200 5800 3200
+Wire Wire Line
+	5800 3600 5800 3550
+Wire Wire Line
+	5800 3250 5800 3200
+Connection ~ 5800 3200
+Wire Wire Line
+	5800 3200 5900 3200
+Wire Wire Line
+	6000 3600 6050 3600
+Wire Wire Line
+	6050 3600 6050 3450
+Wire Wire Line
+	6050 3450 6200 3450
+Wire Wire Line
+	6200 3450 6200 3400
+Connection ~ 6000 3600
+$Comp
+L cmos4000:4066 U10
+U 4 1 5B82DE26
+P 5400 3850
+F 0 "U10" H 5500 4000 50  0000 L CNN
+F 1 "4066" H 5450 3700 50  0000 L CNN
+F 2 "" H 5400 3850 60  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4066b.pdf" H 5400 3850 60  0001 C CNN
+	4    5400 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C4
+U 1 1 5B82DE2D
+P 5800 4050
+F 0 "C4" H 5915 4096 50  0000 L CNN
+F 1 "100nF" H 5915 4005 50  0000 L CNN
+F 2 "" H 5838 3900 50  0001 C CNN
+F 3 "" H 5800 4050 50  0001 C CNN
+	1    5800 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L transistors:2N7000 Q5
+U 1 1 5B82DE34
+P 6100 3850
+F 0 "Q5" H 6305 3896 50  0000 L CNN
+F 1 "2N7000" H 6305 3805 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 6300 3775 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 6100 3850 50  0001 L CNN
+	1    6100 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 4250 6000 4250
+$Comp
+L power:GND #PWR011
+U 1 1 5B82DE3C
+P 6000 4250
+F 0 "#PWR011" H 6000 4000 50  0001 C CNN
+F 1 "GND" H 6005 4077 50  0000 C CNN
+F 2 "" H 6000 4250 50  0001 C CNN
+F 3 "" H 6000 4250 50  0001 C CNN
+	1    6000 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 3850 5800 3850
+Wire Wire Line
+	5800 4250 5800 4200
+Wire Wire Line
+	5800 3900 5800 3850
+Connection ~ 5800 3850
+Wire Wire Line
+	5800 3850 5900 3850
+Wire Wire Line
+	6000 4250 6050 4250
+Wire Wire Line
+	6050 4250 6050 4100
+Wire Wire Line
+	6050 4100 6200 4100
+Wire Wire Line
+	6200 4100 6200 4050
+Connection ~ 6000 4250
+$Comp
+L power:GND #PWR07
+U 1 1 5B82F8C7
+P 5400 4200
+F 0 "#PWR07" H 5400 3950 50  0001 C CNN
+F 1 "GND" H 5405 4027 50  0000 C CNN
+F 2 "" H 5400 4200 50  0001 C CNN
+F 3 "" H 5400 4200 50  0001 C CNN
+	1    5400 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 4100 5400 4200
+$Comp
+L power:+5V #PWR06
+U 1 1 5B831414
+P 5400 1500
+F 0 "#PWR06" H 5400 1350 50  0001 C CNN
+F 1 "+5V" H 5415 1673 50  0000 C CNN
+F 2 "" H 5400 1500 50  0001 C CNN
+F 3 "" H 5400 1500 50  0001 C CNN
+	1    5400 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 1500 5400 1650
+Wire Wire Line
+	4700 2550 4700 3150
+$Comp
+L device:R R3
+U 1 1 5B833029
+P 4400 3150
+F 0 "R3" V 4193 3150 50  0000 C CNN
+F 1 "10k" V 4284 3150 50  0000 C CNN
+F 2 "" V 4330 3150 50  0001 C CNN
+F 3 "" H 4400 3150 50  0001 C CNN
+	1    4400 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4150 3150 4250 3150
+Connection ~ 4150 3150
+Wire Wire Line
+	4550 3150 4700 3150
+Connection ~ 4700 3150
+Wire Wire Line
+	4700 3150 4700 3200
+Wire Wire Line
+	6950 1900 7350 1900
+Wire Wire Line
+	6950 3850 7350 3850
+Wire Wire Line
+	6950 3200 7350 3200
+Connection ~ 6950 3200
+Wire Wire Line
+	6950 3200 6950 3850
+Wire Wire Line
+	6950 2550 7350 2550
+Connection ~ 6950 2550
+Wire Wire Line
+	6950 2550 6950 1900
+Wire Wire Line
+	7100 2050 7350 2050
+Wire Wire Line
+	7150 2700 7350 2700
+Wire Wire Line
+	7200 3350 7350 3350
+Wire Wire Line
+	7250 4000 7350 4000
+Wire Wire Line
+	6950 2550 6950 3200
+Wire Wire Line
+	6950 1900 6950 1250
+Wire Wire Line
+	6950 1250 4700 1250
+Wire Wire Line
+	4700 1250 4700 1900
+Connection ~ 6950 1900
+Connection ~ 4700 1900
+Wire Wire Line
+	4750 5500 7250 5500
+Wire Wire Line
+	7250 4000 7250 5500
+Wire Wire Line
+	4750 5400 7200 5400
+Wire Wire Line
+	7200 3350 7200 5400
+Wire Wire Line
+	4750 5300 7150 5300
+Wire Wire Line
+	7150 2700 7150 5300
+Wire Wire Line
+	4750 5200 7100 5200
+Wire Wire Line
+	7100 2050 7100 5200
+$Comp
+L device:C C5
+U 1 1 5B84BEBA
+P 8050 2100
+F 0 "C5" H 8165 2146 50  0000 L CNN
+F 1 "100nF" H 8165 2055 50  0000 L CNN
+F 2 "" H 8088 1950 50  0001 C CNN
+F 3 "" H 8050 2100 50  0001 C CNN
+	1    8050 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L transistors:2N7000 Q6
+U 1 1 5B84BEC1
+P 8350 1900
+F 0 "Q6" H 8555 1946 50  0000 L CNN
+F 1 "2N7000" H 8555 1855 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 8550 1825 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 8350 1900 50  0001 L CNN
+	1    8350 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 2300 8250 2300
+$Comp
+L power:GND #PWR014
+U 1 1 5B84BEC9
+P 8250 2300
+F 0 "#PWR014" H 8250 2050 50  0001 C CNN
+F 1 "GND" H 8255 2127 50  0000 C CNN
+F 2 "" H 8250 2300 50  0001 C CNN
+F 3 "" H 8250 2300 50  0001 C CNN
+	1    8250 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 1900 8050 1900
+Wire Wire Line
+	8050 2300 8050 2250
+Wire Wire Line
+	8050 1950 8050 1900
+Connection ~ 8050 1900
+Wire Wire Line
+	8050 1900 8150 1900
+Wire Wire Line
+	8250 2300 8300 2300
+Wire Wire Line
+	8300 2300 8300 2150
+Wire Wire Line
+	8300 2150 8450 2150
+Wire Wire Line
+	8450 2150 8450 2100
+Connection ~ 8250 2300
+$Comp
+L device:C C6
+U 1 1 5B84BED9
+P 8050 2750
+F 0 "C6" H 8165 2796 50  0000 L CNN
+F 1 "100nF" H 8165 2705 50  0000 L CNN
+F 2 "" H 8088 2600 50  0001 C CNN
+F 3 "" H 8050 2750 50  0001 C CNN
+	1    8050 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L transistors:2N7000 Q7
+U 1 1 5B84BEE0
+P 8350 2550
+F 0 "Q7" H 8555 2596 50  0000 L CNN
+F 1 "2N7000" H 8555 2505 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 8550 2475 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 8350 2550 50  0001 L CNN
+	1    8350 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 2950 8250 2950
+$Comp
+L power:GND #PWR015
+U 1 1 5B84BEE8
+P 8250 2950
+F 0 "#PWR015" H 8250 2700 50  0001 C CNN
+F 1 "GND" H 8255 2777 50  0000 C CNN
+F 2 "" H 8250 2950 50  0001 C CNN
+F 3 "" H 8250 2950 50  0001 C CNN
+	1    8250 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 2550 8050 2550
+Wire Wire Line
+	8050 2950 8050 2900
+Wire Wire Line
+	8050 2600 8050 2550
+Connection ~ 8050 2550
+Wire Wire Line
+	8050 2550 8150 2550
+Wire Wire Line
+	8250 2950 8300 2950
+Wire Wire Line
+	8300 2950 8300 2800
+Wire Wire Line
+	8300 2800 8450 2800
+Wire Wire Line
+	8450 2800 8450 2750
+Connection ~ 8250 2950
+$Comp
+L device:C C7
+U 1 1 5B84BEF8
+P 8050 3400
+F 0 "C7" H 8165 3446 50  0000 L CNN
+F 1 "100nF" H 8165 3355 50  0000 L CNN
+F 2 "" H 8088 3250 50  0001 C CNN
+F 3 "" H 8050 3400 50  0001 C CNN
+	1    8050 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L transistors:2N7000 Q8
+U 1 1 5B84BEFF
+P 8350 3200
+F 0 "Q8" H 8555 3246 50  0000 L CNN
+F 1 "2N7000" H 8555 3155 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 8550 3125 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 8350 3200 50  0001 L CNN
+	1    8350 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 3600 8250 3600
+$Comp
+L power:GND #PWR016
+U 1 1 5B84BF07
+P 8250 3600
+F 0 "#PWR016" H 8250 3350 50  0001 C CNN
+F 1 "GND" H 8255 3427 50  0000 C CNN
+F 2 "" H 8250 3600 50  0001 C CNN
+F 3 "" H 8250 3600 50  0001 C CNN
+	1    8250 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 3200 8050 3200
+Wire Wire Line
+	8050 3600 8050 3550
+Wire Wire Line
+	8050 3250 8050 3200
+Connection ~ 8050 3200
+Wire Wire Line
+	8050 3200 8150 3200
+Wire Wire Line
+	8250 3600 8300 3600
+Wire Wire Line
+	8300 3600 8300 3450
+Wire Wire Line
+	8300 3450 8450 3450
+Wire Wire Line
+	8450 3450 8450 3400
+Connection ~ 8250 3600
+$Comp
+L device:C C8
+U 1 1 5B84BF17
+P 8050 4050
+F 0 "C8" H 8165 4096 50  0000 L CNN
+F 1 "100nF" H 8165 4005 50  0000 L CNN
+F 2 "" H 8088 3900 50  0001 C CNN
+F 3 "" H 8050 4050 50  0001 C CNN
+	1    8050 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L transistors:2N7000 Q9
+U 1 1 5B84BF1E
+P 8350 3850
+F 0 "Q9" H 8555 3896 50  0000 L CNN
+F 1 "2N7000" H 8555 3805 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-92_Molded_Narrow" H 8550 3775 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 8350 3850 50  0001 L CNN
+	1    8350 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 4250 8250 4250
+$Comp
+L power:GND #PWR017
+U 1 1 5B84BF26
+P 8250 4250
+F 0 "#PWR017" H 8250 4000 50  0001 C CNN
+F 1 "GND" H 8255 4077 50  0000 C CNN
+F 2 "" H 8250 4250 50  0001 C CNN
+F 3 "" H 8250 4250 50  0001 C CNN
+	1    8250 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 3850 8050 3850
+Wire Wire Line
+	8050 4250 8050 4200
+Wire Wire Line
+	8050 3900 8050 3850
+Connection ~ 8050 3850
+Wire Wire Line
+	8050 3850 8150 3850
+Wire Wire Line
+	8250 4250 8300 4250
+Wire Wire Line
+	8300 4250 8300 4100
+Wire Wire Line
+	8300 4100 8450 4100
+Wire Wire Line
+	8450 4100 8450 4050
+Connection ~ 8250 4250
+$Comp
+L power:+5V #PWR012
+U 1 1 5B850A7D
+P 7650 1400
+F 0 "#PWR012" H 7650 1250 50  0001 C CNN
+F 1 "+5V" H 7665 1573 50  0000 C CNN
+F 2 "" H 7650 1400 50  0001 C CNN
+F 3 "" H 7650 1400 50  0001 C CNN
+	1    7650 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 5B850B11
+P 7650 4300
+F 0 "#PWR013" H 7650 4050 50  0001 C CNN
+F 1 "GND" H 7655 4127 50  0000 C CNN
+F 2 "" H 7650 4300 50  0001 C CNN
+F 3 "" H 7650 4300 50  0001 C CNN
+	1    7650 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 1400 7650 1650
+Wire Wire Line
+	7650 4300 7650 4100
+Wire Wire Line
+	3650 4450 3650 4300
+$Comp
+L power:+5V #PWR05
+U 1 1 5B85F1C8
+P 3650 4300
+F 0 "#PWR05" H 3650 4150 50  0001 C CNN
+F 1 "+5V" H 3665 4473 50  0000 C CNN
+F 2 "" H 3650 4300 50  0001 C CNN
+F 3 "" H 3650 4300 50  0001 C CNN
+	1    3650 4300
+	1    0    0    -1  
+$EndComp
+Text HLabel 6350 1700 2    50   Output ~ 0
+tube0_CC
+Wire Wire Line
+	6200 1700 6350 1700
+Text HLabel 6350 2350 2    50   Output ~ 0
+tube1_CC
+Wire Wire Line
+	6200 2350 6350 2350
+Text HLabel 6350 3000 2    50   Output ~ 0
+tube2_CC
+Wire Wire Line
+	6200 3000 6350 3000
+Text HLabel 6350 3650 2    50   Output ~ 0
+tube3_CC
+Wire Wire Line
+	6200 3650 6350 3650
+Text HLabel 8600 1700 2    50   Output ~ 0
+tube4_CC
+Wire Wire Line
+	8450 1700 8600 1700
+Text HLabel 8600 2350 2    50   Output ~ 0
+tube5_CC
+Wire Wire Line
+	8450 2350 8600 2350
+Text HLabel 8600 3000 2    50   Output ~ 0
+tube6_CC
+Wire Wire Line
+	8450 3000 8600 3000
+Text HLabel 8600 3650 2    50   Output ~ 0
+tube7_CC
+Wire Wire Line
+	8450 3650 8600 3650
+Text Notes 2300 2150 0    50   ~ 0
+convert PWM to gate voltage level
+Text Notes 5150 5100 0    50   ~ 0
+select next channel on rising PWM edge
+Text Notes 3750 2900 0    50   ~ 0
+filter to DC-ish signal
+Text Notes 4250 3300 0    50   ~ 0
+Tau = 1ms
+Text Notes 5150 4650 0    50   ~ 0
+"program" current level into capacitors as \ngate voltage
+Text Notes 8300 5650 0    50   ~ 0
+Control pseudocode:\nwhile(true) {\n  sync = 1;\n  for(int i=0; i<8; i++) {  \n    pwm_in = 1;\n    sync = 0;\n    delay(T_pwm * duty_cycle[i]);\n    pwm_in = 0;\n    delay(T_pwm  * (1 - duty_cycle[i]));\n  }\n}\n  
+$EndSCHEMATC
